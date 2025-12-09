@@ -91,20 +91,18 @@ python3 B11504118_term\ project.py
 
 ## 3.Program Structure
 
-├── trajectory_no_drag()
-│   └── 計算無空氣阻力情況下的拋體軌跡
-│
-├── trajectory_linear_drag()
-│   └── 計算線性空氣阻力解析解
-│
-├── interactive_plot()
-│   ├── 初始化繪圖介面
-│   ├── 建立滑桿
-│   ├── 繪製初始軌跡
-│   └── update()：更新曲線並重繪
-│
-└── main entry
-    └── 呼叫 interactive_plot()
+trajectory_no_drag()
+    ↓ 計算無空氣阻力情況的拋體軌跡
+
+trajectory_linear_drag()
+    ↓ 計算線性空氣阻力解析解
+
+interactive_plot()
+    ↓ 建立主介面、滑桿與更新函式
+
+main entry
+    ↓ 呼叫 interactive_plot()
+
 
 
 ## 4.Development Process
