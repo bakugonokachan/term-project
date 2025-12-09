@@ -21,7 +21,6 @@
 
 
 1.1 無空氣阻力模型
-```
 拋體運動方程式如下：
 
 <p align="center">
@@ -36,10 +35,8 @@
 - \(v_0\)：初速度  
 - \(\theta\)：發射角度  
 - \(g\)：重力加速度  
-```
 
 1.2 線性空氣阻力模型
-```
 假設阻力與速度成正比：
 
 <p align="center">
@@ -61,7 +58,6 @@
 <p align="center">
   <img src="img/formula_06.svg" width="300px">
 </p>
-```
 
 
 ## 2. 使用方式（Usage Instructions）
@@ -77,7 +73,7 @@ pip install matplotlib
 python3 B11504118_term\ project.py
 ```
 2.3 互動操作
-```
+
 執行後會開啟視窗，內含三組滑桿：
 
 | 滑桿         | 說明              |
@@ -85,7 +81,7 @@ python3 B11504118_term\ project.py
 | v0 (m/s)    | 調整初速（1–100 m/s） |
 | Angle (deg) | 調整發射角度（1–89°）   |
 | Drag k      | 調整線性空氣阻力（0–1）   |
-```
+
 
 
 ## 3.Program Structure
