@@ -1,140 +1,75 @@
-# Title
+# Interactive Projectile Motion Simulator  
+**Term Project – B11504118**
 
-Interactive Projectile Motion Simulator
+---
 
-Term Project – B11504118
+## 1. 程式功能與技術原理（Function and Technical Principles）
 
-## 1.Function and Technical Principles
-1.1 無空氣阻力模型方程式
-<div align="left">
-𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-cos
-⁡
-𝜃
- 
-𝑡
-x(t)=v
-0
-	​
+本程式實作可視覺化拋體運動的互動模擬工具，包含：
 
-cosθt
-𝑦
-(
-𝑡
-)
-=
-𝑣
-0
-sin
-⁡
-𝜃
- 
-𝑡
-−
-1
-2
-𝑔
-𝑡
-2
-y(t)=v
-0
-	​
+1. 無空氣阻力模型（理想拋物線）  
+2. 線性空氣阻力模型（阻力 ∝ 速度）
 
-sinθt−
-2
-1
-	​
+使用者可透過滑桿調整：
 
-gt
-2
-</div>
-1.2 線性空氣阻力模型
+- 初速 \(v_0\)
+- 發射角度 \(\theta\)
+- 阻力係數 \(k\)
+
+並即時觀察軌跡變化。
+
+---
+
+## 1.1 無空氣阻力模型
+
+拋體運動方程式如下：
+
+<p align="center">
+  <img src="img/formula_01.svg" width="300px">
+</p>
+
+<p align="center">
+  <img src="img/formula_02.svg" width="300px">
+</p>
+
+其中：
+- \(v_0\)：初速度  
+- \(\theta\)：發射角度  
+- \(g\)：重力加速度  
+
+---
+
+## 1.2 線性空氣阻力模型
 
 假設阻力與速度成正比：
 
-<div align="left">
-𝐹
-=
-−
-𝑘
-𝑣
-F=−kv
-𝜏
-=
-𝑚
-𝑘
-τ=
-k
-m
-	​
+<p align="center">
+  <img src="img/formula_03.svg" width="300px">
+</p>
 
-𝑥
-(
-𝑡
-)
-=
-𝑣
-0
-𝜏
-(
-1
-−
-𝑒
-−
-𝑡
-/
-𝜏
-)
-x(t)=v
-0
-	​
+定義時間常數：
 
-τ(1−e
-−t/τ
-)
-𝑦
-(
-𝑡
-)
-=
-(
-𝑣
-0
-𝑦
-+
-𝑔
-𝜏
-)
-(
-1
-−
-𝑒
-−
-𝑡
-/
-𝜏
-)
-−
-𝑔
-𝑡
-𝜏
-y(t)=(v
-0y
-	​
+<p align="center">
+  <img src="img/formula_04.svg" width="300px">
+</p>
 
-+gτ)(1−e
-−t/τ
-)−gtτ
-</div>
+其解析解如下：
 
+<p align="center">
+  <img src="img/formula_05.svg" width="300px">
+</p>
 
-## 2.Usage Instructions
+<p align="center">
+  <img src="img/formula_06.svg" width="300px">
+</p>
+
+---
+
+## 2. 使用方式（Usage Instructions）
+
+### 2.1 安裝必要套件
+```bash
+pip install matplotlib
 
 2.1 安裝必要套件
 
