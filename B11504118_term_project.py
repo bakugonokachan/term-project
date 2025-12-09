@@ -4,7 +4,7 @@ from matplotlib.widgets import Slider
 
 # 物理參數
 g = 9.80665      # 重力加速度
-m = 1.0          # 質量 (線性阻力要用到)
+m = 1.0          # 質量 (線性阻力要用到) 
 
 
 # 無空氣阻力：
