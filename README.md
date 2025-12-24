@@ -67,7 +67,7 @@
 
 
 <p align="center">
-  <img src="img/formula_07svg" width="300px">
+  <img src="img/formula_07.svg" width="300px">
 </p>
 
 由於加入旋轉後，速度分量之間會產生耦合，無法維持和前兩種模型同樣簡潔的解析解形式，因此本程式使用 **RK4（四階 Runge–Kutta）數值積分**來模擬「線性阻力 + 旋轉」情境，並以 \(y<0\) 作為落地停止條件，確保模擬結果穩定且直觀。
