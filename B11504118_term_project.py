@@ -75,9 +75,18 @@ def simulate_linear_drag_with_spin_rk4(v0, theta_deg, k, rpm, C_M,
 
         state = state_next
         t = t_next
-
         if y_next < 0:
+            x_prev, y_prev = xs[-2], ys[-2]
+
+            frac = y_prev / (y_prev - y_next)   
+            x_ground = x_prev + frac * (x_next - x_prev)
+            t_ground = ts[-2] + frac * (t_next - ts[-2])
+
+            xs[-1] = x_ground
+            ys[-1] = 0.0
+            ts[-1] = t_ground
             break
+
 
     return np.array(xs), np.array(ys), np.array(ts)
 
